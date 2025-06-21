@@ -1,4 +1,4 @@
-package ma.Hahn.app.enume;
+package ma.Hahn.app.enums;
 
 public enum ProductCategory {
     ELECTRONICS,

@@ -1,0 +1,9 @@
+package ma.Hahn.app.service;
+
+import ma.Hahn.app.entity.User;
+
+import java.util.Optional;
+
+public interface UserService {
+    Optional<User> findByEmail(String email);
+}

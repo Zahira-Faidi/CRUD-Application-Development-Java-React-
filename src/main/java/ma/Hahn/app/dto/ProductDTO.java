@@ -1,7 +1,7 @@
 package ma.Hahn.app.dto;
 
 import lombok.Data;
-import ma.Hahn.app.enume.ProductCategory;
+import ma.Hahn.app.enums.ProductCategory;
 
 @Data
 public class ProductDTO {
@@ -12,4 +12,3 @@ public class ProductDTO {
     private ProductCategory category;
     private Long createdById;
 }
-
