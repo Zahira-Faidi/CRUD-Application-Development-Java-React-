@@ -1,4 +1,4 @@
-package ma.Hahn.app.service;
+package ma.Hahn.app.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import ma.Hahn.app.dto.ProductDTO;
@@ -8,6 +8,7 @@ import ma.Hahn.app.exception.ResourceNotFoundException;
 import ma.Hahn.app.mapper.ProductMapper;
 import ma.Hahn.app.repository.ProductRepository;
 import ma.Hahn.app.repository.UserRepository;
+import ma.Hahn.app.service.ProductService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
