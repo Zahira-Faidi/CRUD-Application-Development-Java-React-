@@ -1,5 +1,6 @@
 package ma.Hahn.app.repository;
 
+import ma.Hahn.app.dto.ProductDTO;
 import ma.Hahn.app.entity.Product;
 import ma.Hahn.app.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
