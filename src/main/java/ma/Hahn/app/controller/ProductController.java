@@ -3,7 +3,9 @@ package ma.Hahn.app.controller;
 
 import lombok.RequiredArgsConstructor;
 import ma.Hahn.app.dto.ProductDTO;
+import ma.Hahn.app.entity.User;
 import ma.Hahn.app.service.ProductService;
+import ma.Hahn.app.service.impl.UserServiceImpl;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -13,7 +15,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProductController {
     private final ProductService productService;
-
+    private final UserServiceImpl userService;
     @GetMapping
     public List<ProductDTO> getAll() {
         return productService.getAllProducts();
@@ -38,5 +40,10 @@ public class ProductController {
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         productService.deleteProduct(id);
         return ResponseEntity.noContent().build();
+    }
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<List<ProductDTO>> getProductsByUser(@PathVariable Long userId) {
+            User user = userService.getUserById(userId);
+            return ResponseEntity.ok(productService.findByCreatedBy(user));
     }
 }

@@ -1,7 +1,9 @@
 package ma.Hahn.app.service.impl;
 
 import lombok.RequiredArgsConstructor;
+import ma.Hahn.app.dto.ProductDTO;
 import ma.Hahn.app.entity.User;
+import ma.Hahn.app.exception.ResourceNotFoundException;
 import ma.Hahn.app.repository.UserRepository;
 import ma.Hahn.app.service.UserService;
 import org.springframework.stereotype.Service;
@@ -16,7 +18,10 @@ public class UserServiceImpl implements UserService {
     public Optional<User> findByEmail(String email) {
         return userRepository.findByEmail(email);
     }
-
+    @Override
+    public User getUserById(Long id) {
+        return userRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found"));    }
     @Override
     public User save(User user) {
         return userRepository.save(user);

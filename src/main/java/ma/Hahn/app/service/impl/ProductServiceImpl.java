@@ -47,4 +47,12 @@ public class ProductServiceImpl implements ProductService {
     public void deleteProduct(Long id) {
         productRepository.deleteById(id);
     }
+
+    @Override
+    public List<ProductDTO> findByCreatedBy(User user) {
+        return productRepository.findByCreatedBy(user)
+                .stream()
+                .map(mapper::toDto)
+                .collect(Collectors.toList());
+    }
 }
