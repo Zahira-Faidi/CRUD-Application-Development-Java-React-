@@ -24,3 +24,27 @@ This application is designed to follow modern best practices in both frontend an
 Below is an example of JWT token generation via Postman:
 
 ![image](https://github.com/user-attachments/assets/c8073659-040e-4e01-9973-200d61c84f5f)
+
+Get All products
+
+![image](https://github.com/user-attachments/assets/9e4b5100-ef77-4e1b-856d-fb09d1a627cc)
+
+Add product
+
+![image](https://github.com/user-attachments/assets/c2734878-7c1e-4db4-854d-1e42964a5bdb)
+
+Get product by id
+
+![image](https://github.com/user-attachments/assets/339670a0-381f-4a33-a298-d0e878c29e4d)
+
+Get product by user id
+
+![image](https://github.com/user-attachments/assets/17e7e421-c409-4ea8-9e9d-46fa58015823)
+
+Edit product
+
+![image](https://github.com/user-attachments/assets/261d8988-d403-41ab-8ecc-f96fec8876ba)
+
+Delete product
+
+![image](https://github.com/user-attachments/assets/ab70e0df-7b01-4e7b-8cfa-a6cdeeddaef7)
